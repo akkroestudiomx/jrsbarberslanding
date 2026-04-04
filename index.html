@@ -11,27 +11,30 @@
   <style>
     body {
       margin: 0;
-
       background-color: black;
       color: white;
       font-family: 'Manrope', sans-serif;
       scroll-behavior: smooth;
     }
 
+    section {
+      margin: 0;
+    }
+
     header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 20px;
-  background: rgba(0,0,0,0.7);
-  backdrop-filter: blur(10px);
-  z-index: 1000;
-}
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      background: rgba(0,0,0,0.7);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+    }
 
     nav {
       display: flex;
@@ -67,12 +70,17 @@
     }
 
     #agenda a {
-  color: white;
-}
+      color: white;
+    }
 
-#agenda a:visited {
-  color: white;
-}
+    #agenda a:visited {
+      color: white;
+    }
+
+    #agenda a:hover {
+      background: white;
+      color: black !important;
+    }
 
     #contacto a img {
       transition: 0.3s;
@@ -86,16 +94,10 @@
     /* 📱 RESPONSIVE */
     @media (max-width: 768px) {
 
-      header {
-        flex-direction: row;
-        padding: 10px;
-      }
-
       nav {
         flex-wrap: wrap;
         justify-content: center;
         gap: 10px;
-        margin-top: 10px;
       }
 
       nav a {
@@ -128,7 +130,7 @@
 
   <!-- HEADER -->
   <header>
-    <div>JR'S BARBER STUDIO</div>
+    <div>LOGO</div>
     <nav>
       <a href="#servicios">Servicios Premium</a>
       <a href="#barberos">Maestros del estilo</a>
@@ -138,7 +140,11 @@
   </header>
 
   <!-- HERO -->
-  <section style="height: 100vh; margin-top: 70px;
+  <section style="
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+  ">
 
     <a id="slideLink" href="#" target="_blank">
 
@@ -166,11 +172,10 @@
 
   <!-- SERVICIOS -->
   <section id="servicios" style="
-    min-height: 100vh;
+    padding: 60px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
   ">
     <h2 style="font-weight: 400; letter-spacing: 2px; margin-bottom: 20px;">
       SERVICIOS PREMIUM
@@ -226,7 +231,7 @@
 
   <!-- CONTACTO -->
   <section id="contacto" style="
-    padding: 40px 20px 20px 20px;
+    padding: 40px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
