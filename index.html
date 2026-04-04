@@ -3,15 +3,15 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jr’s Barber Studio</title>
-  
-  <!-- Fuente Manrope -->
+
+  <!-- Fuente -->
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
     body {
       margin: 0;
+      padding-top: 80px;
       background-color: black;
       color: white;
       font-family: 'Manrope', sans-serif;
@@ -22,10 +22,12 @@
       position: fixed;
       top: 0;
       width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 20px 20px;
+      padding: 20px;
       background: rgba(0,0,0,0.6);
       backdrop-filter: blur(10px);
       z-index: 1000;
@@ -64,74 +66,34 @@
       width: 100%;
     }
 
-    /* Hover solo para botón de agenda */
+    /* BOTÓN AGENDA */
     #agenda a {
-  color: white;
-}
-
-#agenda a:hover {
-  background: white;
-  color: black !important;
-}
-    header {
-      flex-direction: column;
-      align-items: center;
-      padding: 10px;
+      color: white;
     }
 
-    nav {
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
-      margin-top: 10px;
+    #agenda a:hover {
+      background: white;
+      color: black !important;
     }
 
-    nav a {
-      font-size: 12px;
-    }
-
-    section:first-of-type img {
-      object-fit: contain;
-    }
-
-    h2 {
-      font-size: 18px;
-      text-align: center;
-    }
-
-    img {
-      max-width: 100%;
-      height: auto;
-    }
-
-    #agenda a {
-      padding: 12px 25px;
-      font-size: 14px;
-    }
-
-    #contacto {
-      padding: 30px 15px;
-    }
-
+    /* ICONOS REDES */
     #contacto img {
-      max-height: 300px;
+      transition: 0.3s;
     }
 
-    #contacto img {
-      width: 28px;
+    #contacto img:hover {
+      transform: scale(1.2);
+      opacity: 0.7;
     }
 
-  }
-
-</style>
-    
+  </style>
 </head>
 
 <body>
 
   <!-- HEADER -->
   <header>
-    <div>JR'S BARBER STUDIO</div>
+    <div>LOGO</div>
     <nav>
       <a href="#servicios">Servicios Premium</a>
       <a href="#barberos">Maestros del estilo</a>
@@ -140,7 +102,7 @@
     </nav>
   </header>
 
-  <!-- HERO / CARRUSEL -->
+  <!-- HERO -->
   <section style="height: 100vh; position: relative; overflow: hidden;">
 
     <a id="slideLink" href="#" target="_blank">
@@ -174,7 +136,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: black;
   ">
 
     <h2 style="font-weight: 400; letter-spacing: 2px; margin-bottom: 20px;">
@@ -191,11 +152,10 @@
 
   <!-- BARBEROS -->
   <section id="barberos" style="
-    padding: 80px 20px;
+    padding: 60px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: black;
   ">
 
     <h2 style="font-weight: 400; letter-spacing: 2px; margin-bottom: 30px;">
@@ -217,7 +177,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: black;
   ">
 
     <h2 style="font-weight: 400; letter-spacing: 2px; margin-bottom: 30px;">
@@ -227,7 +186,6 @@
     <a href="https://akkroestudiomx.github.io/barberform/" target="_blank" style="
       padding: 14px 40px;
       border: 1px solid white;
-      color: white;
       text-decoration: none;
       letter-spacing: 2px;
       transition: 0.3s;
@@ -239,11 +197,10 @@
 
   <!-- CONTACTO -->
   <section id="contacto" style="
-    padding: 40px 20px 40px 20px;
+    padding: 40px 20px 20px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: black;
   ">
 
     <img src="images/contacto.png" style="
@@ -254,32 +211,32 @@
     ">
 
     <div style="
-  display: flex;
-  gap: 25px;
-  margin-bottom: 15px;
-">
+      display: flex;
+      gap: 25px;
+      margin-bottom: 15px;
+    ">
 
-  <a href="https://instagram.com/" target="_blank">
-    <img src="images/instagram.png" style="width: 32px;">
-  </a>
+      <a href="https://instagram.com/" target="_blank">
+        <img src="images/instagram.png" style="width: 32px;">
+      </a>
 
-  <a href="https://facebook.com/" target="_blank">
-    <img src="images/facebook.png" style="width: 32px;">
-  </a>
+      <a href="https://facebook.com/" target="_blank">
+        <img src="images/facebook.png" style="width: 32px;">
+      </a>
 
-  <a href="https://tiktok.com/" target="_blank">
-    <img src="images/tiktok.png" style="width: 32px;">
-  </a>
+      <a href="https://tiktok.com/" target="_blank">
+        <img src="images/tiktok.png" style="width: 32px;">
+      </a>
 
-</div>
+    </div>
 
-    <p style="font-size: 12px; color: #777; text-align: center;">
+    <p style="font-size: 12px; color: #777;">
       © 2026 Jr’s Barber Studio. Todos los derechos reservados.
     </p>
 
   </section>
 
-  <!-- BOTÓN WHATSAPP -->
+  <!-- WHATSAPP -->
   <a href="https://wa.me/5215515857956" target="_blank" style="
     position: fixed;
     bottom: 20px;
@@ -290,12 +247,11 @@
     padding: 15px 18px;
     border-radius: 50%;
     text-decoration: none;
-    z-index: 1000;
   ">
     💬
   </a>
 
-  <!-- SCRIPT CARRUSEL -->
+  <!-- SCRIPT -->
   <script>
     const images = [
       "images/hero1.png",
