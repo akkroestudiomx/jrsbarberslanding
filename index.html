@@ -3,9 +3,9 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jr’s Barber Studio</title>
 
-  <!-- Fuente -->
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
@@ -22,7 +22,6 @@
       position: fixed;
       top: 0;
       width: 100%;
-      max-width: 100%;
       box-sizing: border-box;
       display: flex;
       justify-content: space-between;
@@ -59,16 +58,11 @@
     }
 
     nav a:hover {
-      color: #cccccc;
+      color: #ccc;
     }
 
     nav a:hover::after {
       width: 100%;
-    }
-
-    /* BOTÓN AGENDA */
-    #agenda a {
-      color: white;
     }
 
     #agenda a:hover {
@@ -76,15 +70,52 @@
       color: black !important;
     }
 
-    /* ICONOS REDES */
     #contacto a img {
-  transition: 0.3s;
-}
+      transition: 0.3s;
+    }
 
-#contacto a img:hover {
-  transform: scale(1.2);
-  opacity: 0.7;
-}
+    #contacto a img:hover {
+      transform: scale(1.1);
+      opacity: 0.7;
+    }
+
+    /* 📱 RESPONSIVE */
+    @media (max-width: 768px) {
+
+      header {
+        flex-direction: column;
+        padding: 10px;
+      }
+
+      nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      nav a {
+        font-size: 12px;
+      }
+
+      h2 {
+        font-size: 18px;
+        text-align: center;
+      }
+
+      #agenda a {
+        padding: 12px 25px;
+        font-size: 14px;
+      }
+
+      #contacto img {
+        max-height: 300px;
+      }
+
+      #contacto a img {
+        width: 28px;
+      }
+    }
 
   </style>
 </head>
@@ -93,7 +124,7 @@
 
   <!-- HEADER -->
   <header>
-    <div>JR'S BARBER STUDIO</div>
+    <div>LOGO</div>
     <nav>
       <a href="#servicios">Servicios Premium</a>
       <a href="#barberos">Maestros del estilo</a>
@@ -137,7 +168,6 @@
     align-items: center;
     justify-content: center;
   ">
-
     <h2 style="font-weight: 400; letter-spacing: 2px; margin-bottom: 20px;">
       SERVICIOS PREMIUM
     </h2>
@@ -147,7 +177,6 @@
       max-height: 80vh;
       object-fit: contain;
     ">
-
   </section>
 
   <!-- BARBEROS -->
@@ -157,7 +186,6 @@
     flex-direction: column;
     align-items: center;
   ">
-
     <h2 style="font-weight: 400; letter-spacing: 2px; margin-bottom: 30px;">
       MAESTROS DEL ESTILO
     </h2>
@@ -167,22 +195,21 @@
       max-height: 80vh;
       object-fit: contain;
     ">
-
   </section>
 
   <!-- AGENDA -->
   <section id="agenda" style="
-  padding: 60px 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-">
-
-    <h2 style="font-weight: 400; letter-spacing: 2px; margin-bottom: 30px;">
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  ">
+    <h2 style="font-weight: 400; letter-spacing: 2px; margin-bottom: 20px;">
       RESERVA TU VISITA
     </h2>
 
     <a href="https://akkroestudiomx.github.io/barberform/" target="_blank" style="
+      margin-top: 10px;
       padding: 14px 40px;
       border: 1px solid white;
       text-decoration: none;
@@ -191,7 +218,6 @@
     ">
       RESERVAR CITA
     </a>
-
   </section>
 
   <!-- CONTACTO -->
@@ -201,7 +227,6 @@
     flex-direction: column;
     align-items: center;
   ">
-
     <img src="images/contacto.png" style="
       max-width: 100%;
       max-height: 550px;
@@ -209,12 +234,7 @@
       margin-bottom: 20px;
     ">
 
-    <div style="
-      display: flex;
-      gap: 25px;
-      margin-bottom: 15px;
-    ">
-
+    <div style="display: flex; gap: 25px; margin-bottom: 15px;">
       <a href="https://instagram.com/" target="_blank">
         <img src="images/instagram.png" style="width: 32px;">
       </a>
@@ -226,13 +246,11 @@
       <a href="https://tiktok.com/" target="_blank">
         <img src="images/tiktok.png" style="width: 32px;">
       </a>
-
     </div>
 
     <p style="font-size: 12px; color: #777;">
       © 2026 Jr’s Barber Studio. Todos los derechos reservados.
     </p>
-
   </section>
 
   <!-- WHATSAPP -->
