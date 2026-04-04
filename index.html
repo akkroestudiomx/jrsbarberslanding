@@ -22,8 +22,6 @@
     }
 
     header {
-      flex-direction: column;
-      align-items: flex-start;
       position: fixed;
       top: 0;
       left: 0;
@@ -93,13 +91,18 @@
       opacity: 0.7;
     }
 
-    /* 📱 RESPONSIVE */
+    /* RESPONSIVE */
     @media (max-width: 768px) {
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
 
       nav {
         flex-wrap: wrap;
-        justify-content: center;
         gap: 10px;
+        margin-top: 10px;
       }
 
       nav a {
@@ -144,6 +147,7 @@
   <!-- HERO -->
   <section style="
     height: 100vh;
+    margin-top: 110px;
     position: relative;
     overflow: hidden;
   ">
@@ -173,48 +177,25 @@
   </section>
 
   <!-- SERVICIOS -->
-  <section id="servicios" style="
-    padding: 60px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  ">
+  <section id="servicios" style="padding: 60px 20px; display: flex; flex-direction: column; align-items: center;">
     <h2 style="font-weight: 400; letter-spacing: 2px; margin-bottom: 20px;">
       SERVICIOS PREMIUM
     </h2>
 
-    <img src="images/servicios.png" style="
-      max-width: 100%;
-      max-height: 80vh;
-      object-fit: contain;
-    ">
+    <img src="images/servicios.png" style="max-width: 100%; max-height: 80vh; object-fit: contain;">
   </section>
 
   <!-- BARBEROS -->
-  <section id="barberos" style="
-    padding: 60px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  ">
+  <section id="barberos" style="padding: 60px 20px; display: flex; flex-direction: column; align-items: center;">
     <h2 style="font-weight: 400; letter-spacing: 2px; margin-bottom: 30px;">
       MAESTROS DEL ESTILO
     </h2>
 
-    <img src="images/barberos.png" style="
-      max-width: 100%;
-      max-height: 80vh;
-      object-fit: contain;
-    ">
+    <img src="images/barberos.png" style="max-width: 100%; max-height: 80vh; object-fit: contain;">
   </section>
 
   <!-- AGENDA -->
-  <section id="agenda" style="
-    padding: 60px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  ">
+  <section id="agenda" style="padding: 60px 20px; display: flex; flex-direction: column; align-items: center;">
     <h2 style="font-weight: 400; letter-spacing: 2px; margin-bottom: 20px;">
       RESERVA TU VISITA
     </h2>
@@ -232,18 +213,8 @@
   </section>
 
   <!-- CONTACTO -->
-  <section id="contacto" style="
-    padding: 40px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  ">
-    <img src="images/contacto.png" style="
-      max-width: 100%;
-      max-height: 550px;
-      object-fit: contain;
-      margin-bottom: 20px;
-    ">
+  <section id="contacto" style="padding: 40px 20px; display: flex; flex-direction: column; align-items: center;">
+    <img src="images/contacto.png" style="max-width: 100%; max-height: 550px; object-fit: contain; margin-bottom: 20px;">
 
     <div style="display: flex; gap: 25px; margin-bottom: 15px;">
       <a href="https://instagram.com/" target="_blank">
@@ -270,13 +241,15 @@
     bottom: 20px;
     right: 20px;
     background: #25D366;
-    color: white;
-    font-size: 24px;
-    padding: 15px 18px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
-    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
   ">
-    💬
+    <img src="images/whatsapp.png" style="width: 30px;">
   </a>
 
   <!-- SCRIPT -->
