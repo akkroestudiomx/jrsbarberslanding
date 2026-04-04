@@ -11,7 +11,7 @@
   <style>
     body {
       margin: 0;
-      padding-top: 80px;
+
       background-color: black;
       color: white;
       font-family: 'Manrope', sans-serif;
@@ -19,18 +19,19 @@
     }
 
     header {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      box-sizing: border-box;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px;
-      background: rgba(0,0,0,0.6);
-      backdrop-filter: blur(10px);
-      z-index: 1000;
-    }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
 
     nav {
       display: flex;
@@ -65,10 +66,13 @@
       width: 100%;
     }
 
-    #agenda a:hover {
-      background: white;
-      color: black !important;
-    }
+    #agenda a {
+  color: white;
+}
+
+#agenda a:visited {
+  color: white;
+}
 
     #contacto a img {
       transition: 0.3s;
@@ -83,7 +87,7 @@
     @media (max-width: 768px) {
 
       header {
-        flex-direction: column;
+        flex-direction: row;
         padding: 10px;
       }
 
@@ -134,7 +138,7 @@
   </header>
 
   <!-- HERO -->
-  <section style="height: 100vh; position: relative; overflow: hidden;">
+  <section style="height: 100vh; margin-top: 70px;
 
     <a id="slideLink" href="#" target="_blank">
 
