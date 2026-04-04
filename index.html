@@ -24,7 +24,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 20px 40px;
+      padding: 20px 20px;
       background: rgba(0,0,0,0.6);
       backdrop-filter: blur(10px);
       z-index: 1000;
@@ -32,17 +32,17 @@
 
     nav {
       display: flex;
-      gap: 25px;
+      gap: 15px;
     }
 
     nav a {
-  position: relative;
-  color: white;
-  text-decoration: none;
-  font-size: 14px;
-  letter-spacing: 1px;
-  white-space: nowrap;
-}
+      position: relative;
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+      letter-spacing: 1px;
+      white-space: nowrap;
+    }
 
     nav a::after {
       content: "";
@@ -62,6 +62,11 @@
     nav a:hover::after {
       width: 100%;
     }
+
+    a:hover {
+      background: white;
+      color: black;
+    }
   </style>
 </head>
 
@@ -69,7 +74,7 @@
 
   <!-- HEADER -->
   <header>
-    <div>JR'S BARBER STUDIO</div>
+    <div>LOGO</div>
     <nav>
       <a href="#servicios">Servicios Premium</a>
       <a href="#barberos">Maestros del estilo</a>
@@ -79,11 +84,7 @@
   </header>
 
   <!-- HERO / CARRUSEL -->
-  <section style="
-    height: 100vh;
-    position: relative;
-    overflow: hidden;
-  ">
+  <section style="height: 100vh; position: relative; overflow: hidden;">
 
     <a id="slideLink" href="#" target="_blank">
 
@@ -109,101 +110,96 @@
 
   </section>
 
-  <!-- SECCIONES -->
+  <!-- SERVICIOS -->
   <section id="servicios" style="
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: black;
-">
-
-  <h2 style="
-    font-weight: 400;
-    letter-spacing: 2px;
-    margin-bottom: 20px;
-  ">
-    SERVICIOS PREMIUM
-  </h2>
-
-  <img src="images/servicios.png" style="
-    max-width: 100%;
-    max-height: 80vh;
-    object-fit: contain;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: black;
   ">
 
-</section>
+    <h2 style="font-weight: 400; letter-spacing: 2px; margin-bottom: 20px;">
+      SERVICIOS PREMIUM
+    </h2>
 
-</section>
+    <img src="images/servicios.png" style="
+      max-width: 100%;
+      max-height: 80vh;
+      object-fit: contain;
+    ">
+
+  </section>
+
+  <!-- BARBEROS -->
   <section id="barberos" style="
-  padding: 80px 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: black;
-">
-
-  <h2 style="
-    font-weight: 400;
-    letter-spacing: 2px;
-    margin-bottom: 20px;
-  ">
-    MAESTROS DEL ESTILO
-  </h2>
-
-  <img src="images/barberos.png" style="
-    max-width: 100%;
-    max-height: 500px;
-    object-fit: contain;
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: black;
   ">
 
-</section>
+    <h2 style="font-weight: 400; letter-spacing: 2px; margin-bottom: 20px;">
+      MAESTROS DEL ESTILO
+    </h2>
 
-  <h2 style="
-    font-weight: 400;
-    letter-spacing: 2px;
-    margin-bottom: 20px;
+    <img src="images/barberos.png" style="
+      max-width: 100%;
+      max-height: 500px;
+      object-fit: contain;
+    ">
+
+  </section>
+
+  <!-- AGENDA -->
+  <section id="agenda" style="
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: black;
   ">
-    MAESTROS DEL ESTILO
-  </h2>
 
-  <img src="images/barberos.png" style="
-    max-width: 100%;
-    max-height: 80vh;
-    object-fit: contain;
-  ">
+    <h2 style="font-weight: 400; letter-spacing: 2px; margin-bottom: 30px;">
+      RESERVA TU VISITA
+    </h2>
 
-<section id="agenda" style="
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: black;
-">
+    <a href="https://akkroestudiomx.github.io/barberform/" target="_blank" style="
+      padding: 14px 40px;
+      border: 1px solid white;
+      color: white;
+      text-decoration: none;
+      letter-spacing: 2px;
+      transition: 0.3s;
+    ">
+      RESERVAR CITA
+    </a>
 
-  <h2 style="
-    font-weight: 400;
-    letter-spacing: 2px;
-    margin-bottom: 30px;
-  ">
-    RESERVA TU VISITA
-  </h2>
+  </section>
 
-  <a href="https://akkroestudiomx.github.io/barberform/" target="_blank" style="
-    padding: 14px 40px;
-    border: 1px solid white;
+  <!-- CONTACTO (temporal) -->
+  <section id="contacto" style="height:100vh;">
+    CONTACTO
+  </section>
+
+  <!-- BOTÓN WHATSAPP -->
+  <a href="https://wa.me/5215515857956" target="_blank" style="
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
     color: white;
+    font-size: 24px;
+    padding: 15px 18px;
+    border-radius: 50%;
     text-decoration: none;
-    letter-spacing: 2px;
-    transition: 0.3s;
+    z-index: 1000;
   ">
-    RESERVAR CITA
+    💬
   </a>
-
-</section>
-  <section id="contacto" style="height:100vh;">Contacto</section>
 
   <!-- SCRIPT CARRUSEL -->
   <script>
