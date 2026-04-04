@@ -38,12 +38,15 @@
   overflow: hidden;
 ">
 
-  <img id="slide" src="images/hero1.png" style="
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    position: absolute;
-  ">
+  <a id="slideLink" href="https://akkroestudiomx.github.io/barberform/" target="_blank">
+    <img id="slide" src="images/hero1.png" style="
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      position: absolute;
+      cursor: pointer;
+    ">
+  </a>
 
 </section>
 
@@ -53,19 +56,27 @@
   <section id="agenda">Reserva tu visita</section>
   <section id="contacto">Contacto</section>
 
-  <script>
+<script>
   const images = [
     "images/hero1.png",
     "images/hero2.png",
     "images/hero3.png"
   ];
 
+  const links = [
+    "https://akkroestudiomx.github.io/barberform/",
+    "https://wa.me/c/5215515857956",
+    "https://wa.me/5215515857956"
+  ];
+
   let index = 0;
   const slide = document.getElementById("slide");
+  const slideLink = document.getElementById("slideLink");
 
   setInterval(() => {
     index = (index + 1) % images.length;
     slide.src = images[index];
+    slideLink.href = links[index];
   }, 3000);
 </script>
   
