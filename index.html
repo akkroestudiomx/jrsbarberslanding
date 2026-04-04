@@ -53,5 +53,21 @@
   <section id="agenda">Reserva tu visita</section>
   <section id="contacto">Contacto</section>
 
+  <script>
+  const images = [
+    "images/hero1.png",
+    "images/hero2.png",
+    "images/hero3.png"
+  ];
+
+  let index = 0;
+  const slide = document.getElementById("slide");
+
+  setInterval(() => {
+    index = (index + 1) % images.length;
+    slide.src = images[index];
+  }, 3000);
+</script>
+  
 </body>
 </html>
