@@ -2,300 +2,363 @@
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jr’s Barber Studio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jr’s Barber Studio</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap" rel="stylesheet">
 
-  <style>
-    body {
-      margin: 0;
-      background-color: black;
-      color: white;
-      font-family: 'Manrope', sans-serif;
-      scroll-behavior: smooth;
-    }
+<style>
+*{
+  box-sizing:border-box;
+}
 
-    section {
-      margin: 0;
-    }
+body{
+  margin:0;
+  background:#000;
+  color:#fff;
+  font-family:'Manrope',sans-serif;
+  scroll-behavior:smooth;
+}
 
-    header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      box-sizing: border-box;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 20px;
-      background: rgba(0,0,0,0.7);
-      backdrop-filter: blur(10px);
-      z-index: 1000;
-    }
+section{
+  margin:0;
+}
 
-    nav {
-      display: flex;
-      gap: 15px;
-    }
+/* HEADER */
+header{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 20px;
+  background:rgba(0,0,0,.70);
+  backdrop-filter:blur(10px);
+  z-index:1000;
+}
 
-    nav a {
-      position: relative;
-      color: white;
-      text-decoration: none;
-      font-size: 14px;
-      letter-spacing: 1px;
-      white-space: nowrap;
-    }
+nav{
+  display:flex;
+  gap:15px;
+  flex-wrap:wrap;
+}
 
-    nav a::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -5px;
-      width: 0%;
-      height: 1px;
-      background: white;
-      transition: width 0.3s ease;
-    }
+nav a{
+  position:relative;
+  color:#fff;
+  text-decoration:none;
+  font-size:14px;
+  letter-spacing:1px;
+  white-space:nowrap;
+}
 
-    nav a:hover {
-      color: #ccc;
-    }
+nav a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-5px;
+  width:0%;
+  height:1px;
+  background:#fff;
+  transition:width .3s ease;
+}
 
-    nav a:hover::after {
-      width: 100%;
-    }
+nav a:hover::after{
+  width:100%;
+}
 
-    #agenda a {
-      color: white;
-    }
+nav a:hover{
+  color:#ccc;
+}
 
-    #agenda a:visited {
-      color: white;
-    }
+/* HERO */
+#hero{
+  height:100vh;
+  margin-top:110px;
+  position:relative;
+  overflow:hidden;
+}
 
-    #agenda a:hover {
-      background: white;
-      color: black !important;
-    }
+.slide{
+  position:absolute;
+  inset:0;
 
-    #contacto a img {
-      transition: 0.3s;
-    }
+  background-size:cover;
+  background-repeat:no-repeat;
 
-    #contacto a img:hover {
-      transform: scale(1.1);
-      opacity: 0.7;
-    }
+  background-position:left center;
 
-    /* RESPONSIVE */
-    @media (max-width: 768px) {
+  opacity:0;
+  transition:opacity 1s ease;
+}
 
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
+.slide.active{
+  opacity:1;
+}
 
-      nav {
-        flex-wrap: wrap;
-        gap: 10px;
-        margin-top: 10px;
-      }
+#slideLink{
+  position:absolute;
+  inset:0;
+  z-index:5;
+}
 
-      nav a {
-        font-size: 12px;
-      }
+/* SECCIONES */
+.section-center{
+  padding:60px 20px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
 
-      h2 {
-        font-size: 18px;
-        text-align: center;
-      }
+h2{
+  font-weight:400;
+  letter-spacing:2px;
+  margin-bottom:25px;
+  text-align:center;
+}
 
-      #agenda a {
-        padding: 12px 25px;
-        font-size: 14px;
-      }
+/* BOTON */
+#agenda a{
+  color:#fff;
+  text-decoration:none;
+  padding:14px 40px;
+  border:1px solid #fff;
+  letter-spacing:2px;
+  transition:.3s;
+}
 
-      #contacto img {
-        max-height: 300px;
-      }
+#agenda a:hover{
+  background:#fff;
+  color:#000;
+}
 
-      #contacto a img {
-        width: 28px;
-      }
-    }
+/* ICONOS */
+#contacto a img{
+  transition:.3s;
+}
 
-  </style>
+#contacto a img:hover{
+  transform:scale(1.1);
+  opacity:.7;
+}
+
+/* RESPONSIVE */
+@media (max-width:900px){
+
+  header{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  nav{
+    margin-top:10px;
+    gap:10px;
+  }
+
+  nav a{
+    font-size:12px;
+  }
+
+  .slide{
+    background-size:cover;
+    background-position:8% center;
+  }
+  
+  #hero{
+    height:80vh;
+  }
+}
+
+@media (max-width:700px){
+
+  .slide{
+    background-size:cover;
+    background-position:3% center;
+  }
+
+  #hero{
+    height:60vh;
+  }
+
+  h2{
+    font-size:18px;
+  }
+}
+
+@media (max-width:480px){
+
+  .slide{
+    background-size:cover;
+    background-position:0% center;
+  }
+
+  #hero{
+    height:40vh;
+  }
+}
+
+</style>
 </head>
 
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <div>JR'S BARBER STUDIO</div>
-    <nav>
-      <a href="#servicios">Servicios Premium</a>
-      <a href="#barberos">Maestros del estilo</a>
-      <a href="#agenda">Reserva tu visita</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
-  </header>
+<!-- HEADER -->
+<header>
+  <div>JR'S BARBER STUDIO</div>
 
-  <!-- HERO -->
-  <section style="
-    height: 100vh;
-    margin-top: 110px;
-    position: relative;
-    overflow: hidden;
-  ">
+  <nav>
+    <a href="#servicios">Servicios Premium</a>
+    <a href="#barberos">Maestros del estilo</a>
+    <a href="#agenda">Reserva tu visita</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+</header>
 
-    <a id="slideLink" href="#" target="_blank">
+<!-- HERO -->
+<section id="hero">
 
-      <img id="slide1" src="images/hero1.png" style="
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: left center;
-        position: absolute;
-        opacity: 1;
-        transition: opacity 1s ease;
-      ">
+  <div id="slide1" class="slide active"
+       style="background-image:url('images/hero1.png');">
+  </div>
 
-      <img id="slide2" src="images/hero2.png" style="
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: left center;
-        position: absolute;
-        opacity: 0;
-        transition: opacity 1s ease;
-      ">
+  <div id="slide2" class="slide"
+       style="background-image:url('images/hero2.png');">
+  </div>
 
-    </a>
+  <a id="slideLink" href="#" target="_blank"></a>
 
-  </section>
+</section>
 
-  <!-- SERVICIOS -->
-  <section id="servicios" style="padding: 60px 20px; display: flex; flex-direction: column; align-items: center;">
-    <h2 style="font-weight: 400; letter-spacing: 2px; margin-bottom: 20px;">
-      SERVICIOS PREMIUM
-    </h2>
+<!-- SERVICIOS -->
+<section id="servicios" class="section-center">
 
-    <img src="images/servicios.png" style="max-width: 100%; max-height: 80vh; object-fit: contain;">
-  </section>
+  <h2>SERVICIOS PREMIUM</h2>
 
-  <!-- BARBEROS -->
-  <section id="barberos" style="padding: 60px 20px; display: flex; flex-direction: column; align-items: center;">
-    <h2 style="font-weight: 400; letter-spacing: 2px; margin-bottom: 30px;">
-      MAESTROS DEL ESTILO
-    </h2>
+  <img src="images/servicios.png"
+       style="max-width:100%; max-height:80vh; object-fit:contain;">
 
-    <img src="images/barberos.png" style="max-width: 100%; max-height: 80vh; object-fit: contain;">
-  </section>
+</section>
 
-  <!-- AGENDA -->
-  <section id="agenda" style="padding: 60px 20px; display: flex; flex-direction: column; align-items: center;">
-    <h2 style="font-weight: 400; letter-spacing: 2px; margin-bottom: 20px;">
-      RESERVA TU VISITA
-    </h2>
+<!-- BARBEROS -->
+<section id="barberos" class="section-center">
 
-    <a href="https://akkroestudiomx.github.io/barberform/" target="_blank" style="
-      margin-top: 10px;
-      padding: 14px 40px;
-      border: 1px solid white;
-      text-decoration: none;
-      letter-spacing: 2px;
-      transition: 0.3s;
-    ">
-      RESERVAR CITA
-    </a>
-  </section>
+  <h2>MAESTROS DEL ESTILO</h2>
 
-  <!-- CONTACTO -->
-  <section id="contacto" style="padding: 40px 20px; display: flex; flex-direction: column; align-items: center;">
-    <img src="images/contacto.png" style="max-width: 100%; max-height: 550px; object-fit: contain; margin-bottom: 20px;">
+  <img src="images/barberos.png"
+       style="max-width:100%; max-height:80vh; object-fit:contain;">
 
-    <div style="display: flex; gap: 25px; margin-bottom: 15px;">
-      <a href="https://instagram.com/" target="_blank">
-        <img src="images/instagram.png" style="width: 32px;">
-      </a>
+</section>
 
-      <a href="https://facebook.com/" target="_blank">
-        <img src="images/facebook.png" style="width: 32px;">
-      </a>
+<!-- AGENDA -->
+<section id="agenda" class="section-center">
 
-      <a href="https://tiktok.com/" target="_blank">
-        <img src="images/tiktok.png" style="width: 32px;">
-      </a>
-    </div>
+  <h2>RESERVA TU VISITA</h2>
 
-    <p style="font-size: 12px; color: #777;">
-      © 2026 Jr’s Barber Studio. Todos los derechos reservados.
-    </p>
-  </section>
-
-  <!-- WHATSAPP -->
-  <a href="https://wa.me/5215515857956" target="_blank" style="
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #FFFFFF;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-  ">
-    <img src="images/whatsapp.png" style="width: 30px;">
+  <a href="https://akkroestudiomx.github.io/barberform/" target="_blank">
+    RESERVAR CITA
   </a>
 
-  <!-- SCRIPT -->
-  <script>
-    const images = [
-      "images/hero1.png",
-      "images/hero2.png",
-      "images/hero3.png"
-    ];
+</section>
 
-    const links = [
-      "https://akkroestudiomx.github.io/barberform/",
-      "https://wa.me/c/5215515857956",
-      "https://wa.me/5215515857956"
-    ];
+<!-- CONTACTO -->
+<section id="contacto" class="section-center" style="padding-bottom:40px;">
 
-    let index = 0;
-    let current = 1;
+  <img src="images/contacto.png"
+       style="max-width:100%; max-height:550px; object-fit:contain; margin-bottom:20px;">
 
-    const slide1 = document.getElementById("slide1");
-    const slide2 = document.getElementById("slide2");
-    const slideLink = document.getElementById("slideLink");
+  <div style="display:flex; gap:25px; margin-bottom:15px;">
 
-    slideLink.href = links[0];
+    <a href="https://instagram.com/" target="_blank">
+      <img src="images/instagram.png" style="width:32px;">
+    </a>
 
-    setInterval(() => {
-      index = (index + 1) % images.length;
+    <a href="https://facebook.com/" target="_blank">
+      <img src="images/facebook.png" style="width:32px;">
+    </a>
 
-      if (current === 1) {
-        slide2.src = images[index];
-        slide2.style.opacity = 1;
-        slide1.style.opacity = 0;
-        current = 2;
-      } else {
-        slide1.src = images[index];
-        slide1.style.opacity = 1;
-        slide2.style.opacity = 0;
-        current = 1;
-      }
+    <a href="https://tiktok.com/" target="_blank">
+      <img src="images/tiktok.png" style="width:32px;">
+    </a>
 
-      slideLink.href = links[index];
+  </div>
 
-    }, 3000);
-  </script>
+  <p style="font-size:12px; color:#777;">
+    © 2026 Jr’s Barber Studio. Todos los derechos reservados.
+  </p>
+
+</section>
+
+<!-- WHATSAPP -->
+<a href="https://wa.me/5215515857956"
+target="_blank"
+style="
+position:fixed;
+bottom:20px;
+right:20px;
+background:#fff;
+width:60px;
+height:60px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+box-shadow:0 4px 15px rgba(0,0,0,.3);
+z-index:999;
+">
+
+<img src="images/whatsapp.png" style="width:30px;">
+
+</a>
+
+<!-- SCRIPT -->
+<script>
+const images = [
+  "images/hero1.png",
+  "images/hero2.png",
+  "images/hero3.png"
+];
+
+const links = [
+  "https://akkroestudiomx.github.io/barberform/",
+  "https://wa.me/c/5215515857956",
+  "https://wa.me/5215515857956"
+];
+
+let index = 0;
+let current = 1;
+
+const slide1 = document.getElementById("slide1");
+const slide2 = document.getElementById("slide2");
+const slideLink = document.getElementById("slideLink");
+
+slideLink.href = links[0];
+
+setInterval(() => {
+
+  index = (index + 1) % images.length;
+
+  if(current === 1){
+
+    slide2.style.backgroundImage = `url('${images[index]}')`;
+    slide2.classList.add("active");
+    slide1.classList.remove("active");
+    current = 2;
+
+  }else{
+
+    slide1.style.backgroundImage = `url('${images[index]}')`;
+    slide1.classList.add("active");
+    slide2.classList.remove("active");
+    current = 1;
+  }
+
+  slideLink.href = links[index];
+
+}, 3000);
+</script>
 
 </body>
 </html>
